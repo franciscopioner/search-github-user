@@ -1,0 +1,47 @@
+@import '../../styles/colors.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary;
+  align-items: center;
+
+  .menu {
+    height: 40px;
+    background-color: $primaryDark;
+    width: 100%;
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      ul {
+        margin-top: 10px;
+
+        li {
+          display: inline;
+          margin-left: 50px;
+
+          a {
+            color: $white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  img {
+    margin-top: 40px;
+    width: 60px;
+  }
+
+  h1 {
+    color: $white;
+    margin: 16px 0 40px;
+  }
+  p {
+    font-weight: 700;
+    color: $white;
+  }
+}
