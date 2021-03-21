@@ -1,13 +1,16 @@
 import React from 'react';
 import Styles from './home-styles.scss';
-import AxiosHttpClient from '../../../domain/infra/http/axios-http-client';
+import ListUser from '../../components/list-user';
+import ListRepositorys from '../../components/list-ropositorys';
 
 const Home = () => {
   return (
     <div className={Styles.home}>
       <div className={Styles.list}>
-        <h2>HOME</h2>
-        <AxiosHttpClient />
+        <ListUser />
+      </div>
+      <div>
+        <ListRepositorys />
       </div>
       <footer className={Styles.footer} />
     </div>

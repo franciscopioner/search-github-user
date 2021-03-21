@@ -15,6 +15,9 @@ module.exports = {
       '@': path.join(__dirname, 'src'),
     },
   },
+  stats: {
+    errorDetails: true,
+  },
   module: {
     rules: [
       {
