@@ -5,15 +5,14 @@ import ListRepositorys from '../../components/list-ropositorys';
 
 const Home = () => {
   return (
-    <div className={Styles.home}>
-      <div className={Styles.list}>
+    <section className={Styles.section}>
+      <div className={Styles.listUser}>
         <ListUser />
       </div>
-      <div>
+      <div className={Styles.listRepositorys}>
         <ListRepositorys />
       </div>
-      <footer className={Styles.footer} />
-    </div>
+    </section>
   );
 };
 

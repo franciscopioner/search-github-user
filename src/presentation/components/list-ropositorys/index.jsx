@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import axios from '../../../domain/infra/http/axios-http-client';
 import { useSearch } from '../../../domain/usecases/search-user';
+import Styles from './list-repositorys.scss';
 
 const ListRepositorys = () => {
   const {
@@ -32,7 +33,8 @@ const ListRepositorys = () => {
   }, [showRepositorys]);
 
   return (
-    <div>
+    <div className={Styles.result}>
+      <h2>Lista de repositórios</h2>
       <ul>
         {repositorys.map((pObj) => (
           <li key={pObj.id}>{pObj.name}</li>

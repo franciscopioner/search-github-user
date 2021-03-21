@@ -1,0 +1,16 @@
+.result {
+  h2 {
+    margin-bottom: 20px;
+  }
+  ul {
+    max-width: 800px;
+    margin: 0 auto;
+
+    li {
+      list-style: none;
+      border: 1px solid black;
+      padding: 5px 5px 5px 10px;
+      margin-bottom: 2px;
+    }
+  }
+}
