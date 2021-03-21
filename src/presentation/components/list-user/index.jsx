@@ -16,6 +16,8 @@ const ListUser = () => {
     isLoading,
     setShowRepositorys,
     setRepositorys,
+    showUserInfos,
+    setShowUserInfos,
   } = useSearch();
 
   const handleChange = (event) => {
@@ -32,18 +34,22 @@ const ListUser = () => {
         setError('');
         setUserInfos(resp.data);
         console.log(resp.data);
+        setShowUserInfos(true);
       })
       .catch((error) => {
         setError(error.message);
+        setUserInfos({});
+        setShowUserInfos(false);
       })
       .finally(() => {
         setIsLoading(false);
+        setShowRepositorys(false);
       });
   };
 
   const result = (
     <div className={Styles.result}>
-      <h1>{userInfos.name}</h1>
+      <h1>Nome: {userInfos.name}</h1>
       <a
         onClick={() => {
           setShowRepositorys(true);
@@ -57,8 +63,8 @@ const ListUser = () => {
   return (
     <>
       <InputSearch onchange={handleChange} onsubmit={handleSubmit} />
+      {!showUserInfos ? null : result}
       {error}
-      {isLoading ? <Loader /> : result}
     </>
   );
 };

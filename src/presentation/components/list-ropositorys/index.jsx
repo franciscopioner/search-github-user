@@ -28,11 +28,11 @@ const ListRepositorys = () => {
         console.log(error.message);
       })
       .finally(() => {
-        setShowRepositorys(false);
+        /* setShowRepositorys(false); */
       });
   }, [showRepositorys]);
 
-  return (
+  const result = (
     <div className={Styles.result}>
       <h2>Lista de repositórios</h2>
       <ul>
@@ -42,6 +42,8 @@ const ListRepositorys = () => {
       </ul>
     </div>
   );
+
+  return <>{!showRepositorys ? null : result}</>;
 };
 
 export default ListRepositorys;

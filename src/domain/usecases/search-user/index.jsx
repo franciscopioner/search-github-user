@@ -7,8 +7,10 @@ export default function ActionsProvider({ children }) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [user, setUser] = useState('');
-  const [showRepositorys, setShowRepositorys] = useState(false);
   const [repositorys, setRepositorys] = useState([]);
+
+  const [showUserInfos, setShowUserInfos] = useState(false);
+  const [showRepositorys, setShowRepositorys] = useState(false);
 
   return (
     <SearchUserContext.Provider
@@ -21,10 +23,12 @@ export default function ActionsProvider({ children }) {
         setError,
         user,
         setUser,
-        showRepositorys,
-        setShowRepositorys,
         repositorys,
         setRepositorys,
+        showUserInfos,
+        setShowUserInfos,
+        showRepositorys,
+        setShowRepositorys,
       }}
     >
       {children}
@@ -39,8 +43,10 @@ export function useSearch() {
   const { isLoading, setIsLoading } = context;
   const { error, setError } = context;
   const { user, setUser } = context;
-  const { showRepositorys, setShowRepositorys } = context;
   const { repositorys, setRepositorys } = context;
+
+  const { showUserInfos, setShowUserInfos } = context;
+  const { showRepositorys, setShowRepositorys } = context;
 
   return {
     userInfos,
@@ -51,9 +57,11 @@ export function useSearch() {
     setError,
     user,
     setUser,
-    showRepositorys,
-    setShowRepositorys,
     repositorys,
     setRepositorys,
+    showUserInfos,
+    setShowUserInfos,
+    showRepositorys,
+    setShowRepositorys,
   };
 }
