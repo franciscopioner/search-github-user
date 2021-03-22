@@ -1,3 +1,5 @@
+@import '../../styles/colors.scss';
+
 .formSearch {
   margin: 40px 0;
 
@@ -6,8 +8,9 @@
   }
   input {
     margin: 0 5px;
-    border: 1px solid black;
+    border: 1px solid $primary;
     border-radius: 5px;
     padding: 5px;
+    background-color: white;
   }
 }

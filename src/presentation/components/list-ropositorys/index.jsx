@@ -4,13 +4,7 @@ import { useSearch } from '../../../domain/usecases/search-user';
 import Styles from './list-repositorys.scss';
 
 const ListRepositorys = () => {
-  const {
-    setShowRepositorys,
-    showRepositorys,
-    user,
-    repositorys,
-    setRepositorys,
-  } = useSearch();
+  const { showRepositorys, user, repositorys, setRepositorys } = useSearch();
 
   const isFirstRun = useRef(true);
   useEffect(() => {
@@ -27,9 +21,7 @@ const ListRepositorys = () => {
       .catch((error) => {
         console.log(error.message);
       })
-      .finally(() => {
-        /* setShowRepositorys(false); */
-      });
+      .finally(() => {});
   }, [showRepositorys]);
 
   const result = (

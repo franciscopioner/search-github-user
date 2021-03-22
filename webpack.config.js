@@ -67,6 +67,10 @@ module.exports = {
     contentBase: './public',
     writeToDisk: true,
     historyApiFallback: true,
+    headers: {
+      'X-Frame-Options': 'sameorigin',
+      'X-Frame-Options': 'deny',
+    },
   },
   externals: {
     react: 'React',

@@ -63,6 +63,7 @@ const ListUser = () => {
   return (
     <>
       <InputSearch onchange={handleChange} onsubmit={handleSubmit} />
+      {!isLoading ? null : <Loader />}
       {!showUserInfos ? null : result}
       {error}
     </>

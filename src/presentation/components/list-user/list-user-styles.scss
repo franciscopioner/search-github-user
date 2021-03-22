@@ -1,16 +1,17 @@
+@import '../../styles/colors.scss';
+
 .result {
   width: 100%;
   display: block;
   padding: 20px;
   margin: 0 auto;
-  /* border: 1px solid black; */
   max-width: 800px;
 
   h1 {
     margin-bottom: 30px;
   }
   a {
-    border: 1px solid black;
+    border: 1px solid $primary;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
